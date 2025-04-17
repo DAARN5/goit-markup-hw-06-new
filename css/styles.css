@@ -286,7 +286,6 @@ margin-bottom: 72px;
     letter-spacing: 0.04em;
     color: #FFFFFF;
     margin: auto;
-    margin-top: 50px;
     cursor: pointer;
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
     border: none;
@@ -359,6 +358,7 @@ line-height: 1.2; */
 .caracteristic-text {
     line-height: 1.5;
     letter-spacing: 0.02em;
+    font-weight: 500;
 }
 
 /* ==============OUR TEAM-============== */
@@ -382,7 +382,7 @@ line-height: 1.2; */
     display: flex;
     flex-direction: column;
     justify-content: center;
-    gap: 24px;
+    gap: 72px;
     align-items: center;
     color: #2e2f42;
 }
@@ -458,7 +458,7 @@ line-height: 1.2; */
 }
 
 .team-list-list {
-    gap:10px
+    gap:24px
 }
 
 /*--===========PORTFOLIO==============-*/
@@ -495,7 +495,7 @@ line-height: 1.2; */
 .portfolio-list {
     display: flex;
     flex-wrap: wrap;
-    column-gap: 16px;
+    column-gap: 24px;
     row-gap: 48px;
 }
 
@@ -570,6 +570,7 @@ line-height: 1.2; */
 }
 
 .link-footer {
+    font-family: var(--second-family);
     font-weight: 700;
     font-size: 18px;
     line-height: 1.17;
@@ -659,6 +660,7 @@ fill: #f4f4fd;
     line-height: 1.5;
     letter-spacing: 0.02em;
     color: #ffffff;
+    text-align: center;
     
 }
 
@@ -671,7 +673,7 @@ fill: #f4f4fd;
 }
 
 .footer-input {
-    width: 264px;
+    width: 288px;
     height: 40px;
     border: 1px solid #FFFFFF;
     background-color: transparent;
@@ -958,16 +960,6 @@ pointer-events: auto;} */
             color: #2e2f42;
             }
 
-        .header-menu-link {
-            font-weight: 500;
-                font-size: 16px;
-                line-height: 1.5;
-                letter-spacing: 0.02em;
-                color: #2e2f42;
-                position: relative;
-                transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-            }
-
             .header-container {
                 align-items: center;
             }
@@ -979,10 +971,6 @@ pointer-events: auto;} */
                 line-height: 117%;
                 letter-spacing: 0.04em;
                 color: #434455;
-            }
-
-            .header-menu-address li:not(:last-child) {
-                margin-bottom: 12px;
             }
 
         .link-stady {
@@ -1015,10 +1003,7 @@ pointer-events: auto;} */
 .header-menu-address {
     display: flex;
     flex-direction: column;
-    gap: 2px;
-    padding: 0;
-    margin: 0;
-    list-style: none;
+    gap: 12px;
 }
     .header-menu-link {
         font-weight: 500;
@@ -1032,19 +1017,26 @@ pointer-events: auto;} */
             transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.header-menu-link:hover {
-    color: #404bbf; 
-}
+.header-menu-link.active {
+    color: #404bbf;
+  }
 
-.header-menu-link:hover::after {
-    content: "";
+  .header-menu-link.active::after {
+    content: '';
     position: absolute;
-    bottom: 0;
+    bottom: -1px;
     left: 0;
     width: 100%;
-    height: 2px; 
-    background-color: #404bbf; 
+    height: 4px;
+    border-radius: 2px;
+    background-color: #404bbf;
+  }
+  .header-menu-link:hover,
+.header-menu-link:focus {
+  color: #404bbf;
 }
+
+
 .team-container {
     height: 168px;
 }
@@ -1052,8 +1044,8 @@ pointer-events: auto;} */
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 48px;
-  height: 48px;
+  width: 100%;
+  height: 100%;
   border-radius: 50%; 
   fill: #f0f0f0; 
   text-decoration: none;
@@ -1061,14 +1053,14 @@ pointer-events: auto;} */
   transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
 }
 .team-icons {
-  width: 24px;
-  height: 24px;
   color: #ffffff;
 }
 
 
 
         .hero {
+            padding-top: 112px;
+            padding-bottom: 112px;
             background-color: #2e2f42;
             background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
             url(../images/hero-tab-1x.jpg);
@@ -1100,17 +1092,18 @@ pointer-events: auto;} */
         .caracteristic-subtitle {
             text-align: left;
         }
+
+        .caracteristic-text {
+            font-weight: 500;
+        }
     
         .team-item-container {
-            width: calc((100% - 48px) / 2);
+            width: calc((100% - 24px) / 2);
         }
         .team-title {
             text-align: center;
         }
-        .team-item-item {
-            width: 264px;
-            height: 428px;
-        }
+    
 
         .container-team {
             padding-left: 108px;
@@ -1131,7 +1124,7 @@ pointer-events: auto;} */
         }
 
         .portfolio-item {
-            width: calc((100% - 72px) / 2);
+            width: calc((100% - 24px) / 2);
         }
 
         .hero-title {
@@ -1159,6 +1152,10 @@ pointer-events: auto;} */
             margin: 0;
             align-items: start;
         }
+
+        .footer-input {
+            width: 264px;
+        }
         .modal {
             width: 408px;
         }
@@ -1178,44 +1175,8 @@ pointer-events: auto;} */
         .header-menu-address {
             flex-direction: row;
             gap: 40px;
-            padding: 24px;
         }
-.header-menu-link {
-    color: #2E2F42;
-    position: relative;
-    text-decoration: none;
-    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
 
-.header-menu-link:hover {
-    color: #404bbf;
-}
-
-.header-menu-link:hover::after {
-    content: "";
-    position: absolute;
-    bottom: -1px;
-    left: 0;
-    width: 100%;
-    height: 2px;
-    background-color: #404bbf;
-}
-
-.link-stady {
-    color: #404bbf;
-    
-}
-
-.link-stady::after {
-    content: '';
-    position: absolute;
-    left: 0;
-    bottom: -1px;
-    width: 100%;
-    height: 4px;
-    background-color: #404bbf;
-    border-radius: 2px;
-}
     .hero {
         background-color: #2e2f42;
         background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
@@ -1236,10 +1197,16 @@ pointer-events: auto;} */
     padding: 120px 0;
 }
 
+.caracteristic-text {
+    font-weight: 400;
+}
+
 .caracteristic-item {
     width: calc((100% - 3 * 24px) / 4);
 
 }
+
+
 
 .caracteristic-subtitle {
     font-weight: 500;
@@ -1296,6 +1263,11 @@ pointer-events: auto;} */
     max-width: 1158px;
 }
 
+.team-text {
+    text-align: center;
+    margin-bottom: 8px;
+}
+
 .portfolio {
     padding: 120px 0;
 }
@@ -1310,6 +1282,7 @@ pointer-events: auto;} */
 }
 
 .hero-title {
+    margin-bottom: 48px;
     font-weight: 700;
     font-size: 56px;
     line-height: 1.07143;
