@@ -1179,9 +1179,12 @@ pointer-events: auto;}
         .footer-input {
             width: 264px;
         }
-        .modal {
-            display: none !important;
-        }
+        
+            .modal {
+                    width: 408px;
+                    padding: 72px 24px 24px 24px;
+                }
+        
         }
 
     
