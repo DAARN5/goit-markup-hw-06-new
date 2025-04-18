@@ -980,15 +980,17 @@ pointer-events: auto;}
             .header-container {
                 align-items: center;
             }
+        .header-address-link {
+            font-size: 12px;
+            line-height: 1.17;
+            letter-spacing: 0.04em;
+            padding: 0;
+        }
 
-            .header-address-link {
-                font-family: var(--font-family);
-                font-weight: 400;
-                font-size: 12px;
-                line-height: 117%;
-                letter-spacing: 0.04em;
-                color: #434455;
-            }
+.header-address-link:hover,
+.header-address-link:focus {
+    color: #404bbf;
+}
 
         .link-stady {
             position: relative;
@@ -1201,8 +1203,15 @@ pointer-events: auto;}
         .header-menu-address {
             flex-direction: row;
             gap: 40px;
-            
         }
+
+    .header-address-link {
+            font-size: 16px;
+            line-height: 1.5;
+            letter-spacing: 0.02em;
+            padding: 24px 0;
+        }
+
 
     .hero {
         background-color: #2e2f42;
